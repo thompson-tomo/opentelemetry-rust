@@ -772,7 +772,7 @@ use `opentelemetry::global::shutdown_tracer_provider` explicitly instead.
 
 ### Changed
 
-- Ensure that impls of `Span` are `Send` and `Sync` when used in `global`
+- Ensure that implementations of `Span` are `Send` and `Sync` when used in `global`
 - Changed `Key` and `Value` method signatures to remove `Cow` references
 - Tracer's `start` now uses the implicit current context instead of an explicit span context.
   `start_with_context` may be used to specify a context if desired.

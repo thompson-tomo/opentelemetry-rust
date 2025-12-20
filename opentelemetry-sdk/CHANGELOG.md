@@ -321,7 +321,7 @@ field as metadata, a feature introduced in version 0.1.40.
 - *Breaking* `opentelemetry::global::shutdown_tracer_provider()` removed from the API,
   should now use `tracer_provider.shutdown()` see
   [#2369](https://github.com/open-telemetry/opentelemetry-rust/pull/2369) for
-  a migration example. "Tracer provider" is cheaply clonable, so users are
+  a migration example. "Tracer provider" is cheaply cloneable, so users are
   encouraged to set a clone of it as the global (ex:
   `global::set_tracer_provider(provider.clone()))`, so that instrumentations
   and other components can obtain tracers from `global::tracer()`. The

@@ -3,7 +3,7 @@
 > Status:Development 
 > Last Updated: 2025-07-16
 
-This document describes how the **OTLP exporters** are organised and how they integrate with the wider OpenTelemetry Rust SDK.  
+This document describes how the **OTLP exporters** are organized and how they integrate with the wider OpenTelemetry Rust SDK.  
 
 > Reference the [OTLP specification](https://opentelemetry.io/docs/specs/otlp/) and [OTLP Protocol Exporter specification](https://opentelemetry.io/docs/specs/otel/protocol/exporter/). 
 
@@ -127,7 +127,7 @@ Builder fails fast, runtime exporter surfaces errors through `export()` futures 
 
 ---
 
-## 8. Extension & Customisation Points
+## 8. Extension & Customization Points
 1. **Custom headers / metadata** – `.with_metadata(map)` (gRPC) or `.with_headers()` (HTTP).
 2. **Compression** – `.with_compression(Compression::Gzip | Compression::Zstd)` behind feature-flags.
 3. **TLS** – via `TonicConfig` or `HttpConfig`; root-store helper features embed common CA bundles.
@@ -140,7 +140,7 @@ Builder fails fast, runtime exporter surfaces errors through `export()` futures 
 | Decision | Rationale |
 |----------|-----------|
 | *Builder pattern with marker types* | Compile-time guarantee that exactly one transport is chosen. |
-| *Transport-specific modules* | Keep heavy deps (`tonic`, `reqwest`) behind feature-flags to minimise compile times. |
+| *Transport-specific modules* | Keep heavy deps (`tonic`, `reqwest`) behind feature-flags to minimize compile times. |
 
 ---
 

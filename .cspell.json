@@ -5,7 +5,24 @@
     "useGitignore": true,
     "minWordLength": 4,
     "ignorePaths": [
-        "target/**"
+        "target/**",
+        "**.j2",
+        "**.json",
+        "**.proto",
+        "**.rs",
+        "**.toml",
+        "**.txt",
+        "**.yaml"
+    ],    
+    "patterns" :[
+        {
+            "name": "CodeBlock",
+            "pattern": "/^(\\s*[~`]{3,}).*?[\\s\\S]*?\\1/igmx"
+        },
+        {
+            "name": "CodeName",
+            "pattern": "/([~`])[^~`]*?\\1/x"
+        }
     ],
     // list of words to be ignored.  unlike `words` below, these won't be
     // suggested as corrections for misspelled words.
@@ -23,95 +40,60 @@
         "hte",
         "teh"
     ],
+    "dictionaries": [
+        "companies",
+        "people-names",
+        "rust",
+        "software-tools",
+        "softwareTerms"
+    ],
     // these are words that are always correct and can be thought of as our
     // workspace dictionary.
     "words": [
-        "actix",
+        "logrecord",
+        "periodicreader",
+
+        //people names
         "Antonsson",
-        "anyvalue",
-        "appender",
-        "appenders",
-        "autobenches",
         "Bhasin",
         "Björn",
-        "BLRP",
-        "chrono",
         "Cijo",
-        "clippy",
-        "clonable",
-        "codecov",
-        "dashmap",
-        "datapoint",
-        "deque",
         "Dirkjan",
-        "docsrs",
-        "Dwarnings",
-        "eprintln",
-        "EPYC",
-        "flamegraph",
         "Gerring",
-        "grpcio",
         "Grübel",
-        "hasher",
-        "impls",
-        "isahc",
         "Isobel",
-        "jaegertracing",
         "Kühle",
         "Kumar",
         "Lalit",
-        "LIBCLANG",
-        "logrecord",
-        "MILLIS",
-        "mpsc",
-        "msrv",
-        "mykey",
-        "myunit",
-        "myvalue",
-        "nocapture",
         "Ochtman",
-        "opentelemetry",
-        "openzipkin",
-        "otcorrelations",
-        "OTELCOL",
-        "OTLP",
-        "periodicreader",
         "Pillai",
-        "pprof",
-        "protos",
-        "prost",
-        "protoc",
-        "quantile",
-        "quantiles",
         "Redelmeier",
-        "reqwest",
-        "rstest",
-        "runtimes",
-        "rustc",
-        "rustls",
-        "schemars",
-        "semconv",
-        "serde",
-        "shoppingcart",
-        "struct",
         "Tescher",
-        "testcontainers",
-        "testresults",
-        "thiserror",
-        "traceparent",
-        "Traceparent",
-        "tracerprovider",
-        "tracestate",
-        "UCUM",
         "Umesan",
-        "unsampled",
-        "updown",
-        "urlencoding",
-        "usize",
         "Utkarsh",
-        "webpki",
         "Zhongyang",
-        "zipkin"
+
+        //rust
+        "Actix",
+        "DashMap",
+        "grpcio",
+        "protoc",
+        "Prost",
+        "Reqwest",
+        "Rustls",
+        "Thiserror",
+        "webpki",
+
+        // software terms
+        "appender",
+        "appenders",
+        "cloneable",
+        "BLRP",
+        "quantiles",
+        "unsampled",
+        "UCUM",
+        // software tools
+        "Zipkin"
     ],
     "enabledLanguageIds": [
         "jsonc",
@@ -129,7 +111,11 @@
         },
         {
             "languageId": "markdown",
-            "caseSensitive": false
+            "caseSensitive": false,
+            "ignoreRegExpList": [
+                "CodeBlock",
+                "CodeName"
+            ]
         },
         {
             "languageId": "rust",

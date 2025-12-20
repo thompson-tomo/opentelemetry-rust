@@ -43,7 +43,7 @@ Key points:
 * **OTLP** – [design doc](./otlp.md) — the OTLP exporter.
 
 ## 5 Extensibility Hooks
-| Layer | Customisation points |
+| Layer | Customization points |
 |-------|---------------------|
 | SDK | Provide complete alternative SDK |
 | SDK | Plug-in **samplers**, **metric readers**, and **log processors** |
