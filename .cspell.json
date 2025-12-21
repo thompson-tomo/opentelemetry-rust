@@ -4,6 +4,7 @@
     "language": "en,en-US",
     "useGitignore": true,
     "minWordLength": 4,
+    "import": ["https://cdn.jsdelivr.net/npm/@cspell/dict-people-names/cspell-ext.json"],
     "ignorePaths": [
         "target/**",
         "**.j2",
@@ -44,6 +45,7 @@
         "companies",
         "people-names",
         "rust",
+        "rust-crates",
         "software-tools",
         "softwareTerms"
     ],
@@ -53,47 +55,13 @@
         "logrecord",
         "periodicreader",
 
-        //people names
-        "Antonsson",
-        "Bhasin",
-        "Björn",
-        "Cijo",
-        "Dirkjan",
-        "Gerring",
-        "Grübel",
-        "Isobel",
-        "Kühle",
-        "Kumar",
-        "Lalit",
-        "Ochtman",
-        "Pillai",
-        "Redelmeier",
-        "Tescher",
-        "Umesan",
-        "Utkarsh",
-        "Zhongyang",
-
-        //rust
-        "Actix",
-        "DashMap",
-        "grpcio",
-        "protoc",
-        "Prost",
-        "Reqwest",
-        "Rustls",
-        "Thiserror",
-        "webpki",
-
         // software terms
         "appender",
         "appenders",
-        "cloneable",
         "BLRP",
+        "cloneable",
         "quantiles",
-        "unsampled",
-        "UCUM",
-        // software tools
-        "Zipkin"
+        "UCUM"
     ],
     "enabledLanguageIds": [
         "jsonc",
