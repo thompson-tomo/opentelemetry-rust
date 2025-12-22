@@ -31,7 +31,7 @@ fn noop_logger_provider() -> &'static SdkLoggerProvider {
 ///
 /// All `Logger`s created by a `SdkLoggerProvider` will share the same
 /// [`Resource`] and have their created log records processed by the
-/// configured log processors. This is a clonable handle to the `SdkLoggerProvider`
+/// configured log processors. This is a cloneable handle to the `SdkLoggerProvider`
 /// itself, and cloning it will create a new reference, not a new instance of a
 /// `SdkLoggerProvider`. Dropping the last reference will trigger the shutdown of
 /// the provider, ensuring that all remaining logs are flushed and no further

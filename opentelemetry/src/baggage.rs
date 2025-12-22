@@ -663,7 +663,7 @@ mod tests {
         {
             let ctx = Context::current();
             let baggage = ctx.baggage();
-            // At this point baggage should still contain the inital value.
+            // At this point baggage should still contain the initial value.
             assert_eq!(baggage.len(), 1);
 
             // Baggage gets cleared.

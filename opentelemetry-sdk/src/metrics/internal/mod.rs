@@ -36,7 +36,7 @@ pub(crate) trait Aggregator {
     /// [`Aggregator::update`] as short as possible.
     type PreComputedValue;
 
-    /// Called everytime a new attribute-set is stored.
+    /// Called every time a new attribute-set is stored.
     fn create(init: &Self::InitConfig) -> Self;
 
     /// Called for each measurement.

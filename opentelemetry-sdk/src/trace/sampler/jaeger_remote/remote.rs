@@ -42,7 +42,7 @@ pub(crate) struct PerOperationSamplingStrategies {
     /// will be N times higher. This setting applies to ALL operations, whether or not they match
     /// one of the perOperationStrategies.
     pub(crate) default_lower_bound_traces_per_second: f64,
-    /// perOperationStrategies describes sampling strategiesf for individual operations within
+    /// perOperationStrategies describes sampling strategies for individual operations within
     /// a given service.
     pub(crate) per_operation_strategies: Vec<OperationSamplingStrategy>,
     /// defaultUpperBoundTracesPerSecond defines an upper bound rate limit.
@@ -57,7 +57,7 @@ pub(crate) struct PerOperationSamplingStrategies {
 pub(crate) struct SamplingStrategyResponse {
     /// Legacy field that was meant to indicate which one of the strategy fields
     /// below is present. This enum was not extended when per-operation strategy
-    /// was introduced, because extending enum has backwards compatiblity issues.
+    /// was introduced, because extending enum has backwards compatibility issues.
     /// The recommended approach for consumers is to ignore this field and instead
     /// checks the other fields being not null (starting with operationSampling).
     /// For producers, it is recommended to set this field correctly for probabilistic

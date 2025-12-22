@@ -72,9 +72,9 @@
 //! | `bool`          | [`AnyValue::Boolean`] |                                                                                                                         |
 //! | `str`           | [`AnyValue::String`]  |                                                                                                                         |
 //! | Bytes           | [`AnyValue::Bytes`]   | Requires the `with-serde` feature, otherwise it will be stringified using [`std::fmt::Debug`]                           |
-//! | `()`            | -                     | Unit values are discared                                                                                                |
+//! | `()`            | -                     | Unit values are discarded                                                                                                |
 //! | `Some`          | Any                   | `Some` variants use their inner value                                                                                   |
-//! | `None`          | -                     | `None` variants are discared                                                                                            |
+//! | `None`          | -                     | `None` variants are discarded                                                                                            |
 //! | Unit struct     | [`AnyValue::String`]  | Uses the name of the struct                                                                                             |
 //! | Unit variant    | [`AnyValue::String`]  | Uses the name of the variant                                                                                            |
 //! | Newtype struct  | Any                   | Uses the inner value of the newtype                                                                                     |
@@ -91,7 +91,7 @@
 //!
 //! This library provides the following Cargo features:
 //!
-//! - `with-serde`: Support complex values as attributes without stringifying them.
+//! - `with-serde`: Support complex values as attributes without converting them to strings (stringify).
 //!
 //! [Logs Bridge API]: https://opentelemetry.io/docs/specs/otel/logs/bridge-api/
 //!

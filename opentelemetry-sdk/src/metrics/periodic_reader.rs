@@ -752,7 +752,7 @@ mod tests {
         // this should be ignored in CI
         std::thread::sleep(Duration::from_millis(500));
 
-        // Assert that atleast 2 exports are attempted given the 1st one fails.
+        // Assert that at least 2 exports are attempted given the 1st one fails.
         assert!(exporter.get_count() >= 2);
     }
 

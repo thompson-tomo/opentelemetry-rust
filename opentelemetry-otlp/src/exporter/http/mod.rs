@@ -402,7 +402,7 @@ impl OtlpHttpClient {
 
             // Select runtime based on HTTP client feature - if we're using
             // one without Tokio, we don't need or want the Tokio async blocking
-            // behaviour.
+            // behavior.
             #[cfg(feature = "reqwest-blocking-client")]
             let runtime = opentelemetry_sdk::runtime::NoAsync;
 
@@ -896,7 +896,7 @@ mod tests {
         let uri = build_endpoint_uri("https://example.com", "/v1/traces").unwrap();
         assert_eq!(uri, "https://example.com/v1/traces");
 
-        // Should be no duplicate slahes:
+        // Should be no duplicate slashes:
         let uri = build_endpoint_uri("https://example.com/", "/v1/traces").unwrap();
         assert_eq!(uri, "https://example.com/v1/traces");
 

@@ -15,7 +15,7 @@ use crate::error::{OTelSdkError, OTelSdkResult};
 ///
 /// ## Cloning and Shutdown
 ///
-/// The `TracerProvider` is designed to be clonable. Cloning a `TracerProvider`  creates a
+/// The `TracerProvider` is designed to be cloneable. Cloning a `TracerProvider`  creates a
 /// new reference to the same provider, not a new instance. Dropping the last reference
 /// to the `TracerProvider` will automatically trigger its shutdown. During shutdown, the provider
 /// will flush all remaining spans, ensuring they are passed to the configured processors.

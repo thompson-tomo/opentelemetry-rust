@@ -130,7 +130,7 @@ fn upsert_empty_file(path: &str) -> File {
     file
 }
 
-/// Cleans up file specificed as argument by truncating its content.
+/// Cleans up file specified as argument by truncating its content.
 ///
 /// This function is meant to cleanup the generated json file before a test starts,
 /// preventing entries from previous tests from interfering with the current test's results.

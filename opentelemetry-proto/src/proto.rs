@@ -1,5 +1,5 @@
 /// provide serde support for proto traceIds and spanIds.
-/// Those are hex encoded strings in the jsons but they are byte arrays in the proto.
+/// Those are hex encoded strings in the json but they are byte arrays in the proto.
 /// See https://opentelemetry.io/docs/specs/otlp/#json-protobuf-encoding for more details
 #[cfg(all(feature = "with-serde", feature = "gen-tonic-messages"))]
 pub(crate) mod serializers {

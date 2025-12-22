@@ -26,7 +26,7 @@ use super::{
 /// All `Meter`s created by a `MeterProvider` will be associated with the same
 /// [Resource], have the same views applied to them, and have their produced
 /// metric telemetry passed to the configured [MetricReader]s. This is a
-/// clonable handle to the MeterProvider implementation itself, and cloning it
+/// cloneable handle to the MeterProvider implementation itself, and cloning it
 /// will create a new reference, not a new instance of a MeterProvider. Dropping
 /// the last reference to it will trigger shutdown of the provider. Shutdown can
 /// also be triggered manually by calling the `shutdown` method.

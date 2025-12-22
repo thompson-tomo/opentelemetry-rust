@@ -200,7 +200,7 @@ pub struct Metric {
     #[prost(message, repeated, tag = "12")]
     pub metadata: ::prost::alloc::vec::Vec<super::super::common::v1::KeyValue>,
     /// Data determines the aggregation type (if any) of the metric, what is the
-    /// reported value type for the data points, as well as the relatationship to
+    /// reported value type for the data points, as well as the relationship to
     /// the time interval over which they are reported.
     #[prost(oneof = "metric::Data", tags = "5, 7, 9, 10, 11")]
     #[cfg_attr(feature = "with-serde", serde(flatten))]
@@ -209,7 +209,7 @@ pub struct Metric {
 /// Nested message and enum types in `Metric`.
 pub mod metric {
     /// Data determines the aggregation type (if any) of the metric, what is the
-    /// reported value type for the data points, as well as the relatationship to
+    /// reported value type for the data points, as well as the relationship to
     /// the time interval over which they are reported.
     #[cfg_attr(feature = "with-schemars", derive(schemars::JsonSchema))]
     #[cfg_attr(feature = "with-serde", derive(serde::Serialize, serde::Deserialize))]
@@ -630,7 +630,7 @@ pub mod exponential_histogram_data_point {
     pub struct Buckets {
         /// Offset is the bucket index of the first entry in the bucket_counts array.
         ///
-        /// Note: This uses a varint encoding as a simple form of compression.
+        /// Note: This uses a variant encoding as a simple form of compression.
         #[prost(sint32, tag = "1")]
         pub offset: i32,
         /// bucket_counts is an array of count values, where bucket_counts\[i\] carries
@@ -641,7 +641,7 @@ pub mod exponential_histogram_data_point {
         /// Note: By contrast, the explicit HistogramDataPoint uses
         /// fixed64.  This field is expected to have many buckets,
         /// especially zeros, so uint64 has been selected to ensure
-        /// varint encoding.
+        /// variant encoding.
         #[prost(uint64, repeated, tag = "2")]
         pub bucket_counts: ::prost::alloc::vec::Vec<u64>,
     }

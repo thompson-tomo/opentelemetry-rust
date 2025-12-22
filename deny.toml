@@ -62,7 +62,7 @@ yanked = "deny"
 multiple-versions = "warn"
 # Lint level for when a crate version requirement is `*`
 wildcards = "warn"
-# The graph highlighting used when creating dotgraphs for crates
+# The graph highlighting used when creating DOT graphs for crates
 # with multiple versions
 # * lowest-version - The path to the lowest versioned duplicate is highlighted
 # * simplest-path - The path to the version with the fewest edges is highlighted
