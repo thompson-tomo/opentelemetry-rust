@@ -77,21 +77,7 @@
         "tracez",
         "zpages",
 
-        // software terms
-        "appender", //
-        "appenders", //
-        "cloneable", //
-        "quantiles", //
-        "UCUM", //
-
-        "retryable",
-        "rustc",
-        "pprof",
-        "testcontainers",
-        "bitmask",
-        "noops",
-        "parseable",
-        "preconfigured"
+        "rustc"
     ],
     "enabledLanguageIds": [
         "json",
